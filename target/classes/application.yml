@@ -1,0 +1,88 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: intelligent customer service
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  # JPA配置
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+  # Redis配置
+  data:
+    redis:
+      host: 192.168.171.128
+      port: 6380
+      database: 0
+      timeout: 5000ms
+  # AI模型与向量存储配置
+  ai:
+    memory:
+      jdbc:
+        table-name: ai_chat_memory
+        create-table: true  # 自动创建表结构
+    # Spring AI Redis向量存储配置
+    vectorstore:
+      redis:
+        initialize-schema: true
+        index-name: knowledge_vector_index
+        prefix: "rag:"
+    # 智谱AI（GLM）配置
+    zhipuai:
+      api-key: ${ZP-KEY}
+      chat:
+        options:
+          model: glm-5.3-flash
+          temperature: 0.0
+      embedding:
+        options:
+          model: embedding-3
+
+
+feign:
+  client:
+    config:
+      default: # default 表示全局配置，对所有 Feign 客户端生效
+        # 超时配置（单位：毫秒）
+        connect-timeout: 5000  # 连接超时时间（默认 10 秒）
+        read-timeout: 10000    # 读取超时时间（默认 60 秒）
+
+# 日志配置
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread]  %-5level %logger{36} - %msg%n"
+  level:
+    root: INFO
+    cn.sg.intelligentcustomerservice: DEBUG
+    org.springframework.ai: DEBUG
+    io.modelcontextprotocol.client: DEBUG
+    io.modelcontextprotocol.spec: DEBUG
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+
+
+# 知识库文档加载配置
+app:
+  knowledge:
+    csv-path: qa/QA.csv
+  # RAG服务配置
+  rag:
+    top-k: 3
+    similarity-threshold: 0.7

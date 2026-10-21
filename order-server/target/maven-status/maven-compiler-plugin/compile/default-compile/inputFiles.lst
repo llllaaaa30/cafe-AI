@@ -1,0 +1,10 @@
+D:\Intelligent_consumer_service\Intelligent_customer_SpringAIAlibaba-main\order-server\src\main\java\cn\sg\orderserver\config\McpConfiguration.java
+D:\Intelligent_consumer_service\Intelligent_customer_SpringAIAlibaba-main\order-server\src\main\java\cn\sg\orderserver\controller\OrderController.java
+D:\Intelligent_consumer_service\Intelligent_customer_SpringAIAlibaba-main\order-server\src\main\java\cn\sg\orderserver\dto\CreateOrderCmd.java
+D:\Intelligent_consumer_service\Intelligent_customer_SpringAIAlibaba-main\order-server\src\main\java\cn\sg\orderserver\dto\CreateOrderResponse.java
+D:\Intelligent_consumer_service\Intelligent_customer_SpringAIAlibaba-main\order-server\src\main\java\cn\sg\orderserver\entity\Order.java
+D:\Intelligent_consumer_service\Intelligent_customer_SpringAIAlibaba-main\order-server\src\main\java\cn\sg\orderserver\mcp\OrderMcpController.java
+D:\Intelligent_consumer_service\Intelligent_customer_SpringAIAlibaba-main\order-server\src\main\java\cn\sg\orderserver\OrderServerApplication.java
+D:\Intelligent_consumer_service\Intelligent_customer_SpringAIAlibaba-main\order-server\src\main\java\cn\sg\orderserver\repository\OrderRepository.java
+D:\Intelligent_consumer_service\Intelligent_customer_SpringAIAlibaba-main\order-server\src\main\java\cn\sg\orderserver\service\impl\OrderServiceImpl.java
+D:\Intelligent_consumer_service\Intelligent_customer_SpringAIAlibaba-main\order-server\src\main\java\cn\sg\orderserver\service\OrderService.java

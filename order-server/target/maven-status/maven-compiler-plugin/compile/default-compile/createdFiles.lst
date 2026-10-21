@@ -1,0 +1,4 @@
+cn\sg\orderserver\controller\OrderController$CreateOrderRequest.class
+cn\sg\orderserver\repository\OrderRepository.class
+cn\sg\orderserver\controller\OrderController$OrderDetailRequest.class
+cn\sg\orderserver\controller\OrderController$UserOrderRequest.class
